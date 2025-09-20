@@ -114,5 +114,22 @@
         </select>
       </form>
     </dialog>
+
+    <!--Add New Task Modal-->
+    <dialog id="add-task-modal">
+      <form method="dialog" id="new-task-form">
+        <!--modal header-->
+        <div class="new-task-modal-header">
+          <h3>Add New Task</h3>
+          <button type="button" class="close-btn" id="close-modal-btn"></button>
+        </div>
+        <!--Modal Main Section-->
+        <label for="new-task-input">Title</label>
+        <input id="new-task-input" placeholder="Enter the title">
+        <label for="new-task-desc" >Description</label>
+        <textarea id="new-task-desc" placeholder="Enter the description"></textarea>
+        <button type="submit" id="new-task-submit">Create Task</button>
+      </form>
+    </dialog>
   </body>
 </html>
