@@ -128,6 +128,12 @@
         <input id="new-task-input" placeholder="Enter the title">
         <label for="new-task-desc" >Description</label>
         <textarea id="new-task-desc" placeholder="Enter the description"></textarea>
+        <label for="new-task-status"></label>
+        <select id="new-task-status" name="status" required>
+          <option value="todo">To Do</option>
+          <option value="doing">Doing</option>
+          <option value="done">Done</option>
+        </select>
         <button type="submit" id="new-task-submit">Create Task</button>
       </form>
     </dialog>
