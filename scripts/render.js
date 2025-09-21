@@ -22,13 +22,14 @@ export function renderTasks(tasks){
         doneCol.innerHTML = "";
 
     /**render all tasks */
-    if(toDoCol){
-        toDoCol.appendChild(card);
-    }
-    if(doingCol){
-        doingCol.appendChild(card);
-    }
-    if(doneCol){
-        doneCol.appendChild(card);
-    }
+    tasks.forEach(task => {
+        const card = createTaskCard(task);
+        if(task.status === "todo"){
+            toDoCol.appendChild(card);
+        }else if(task.status === "doing"){
+            doingCol.appendChild(card);
+        }else if(task.status === "done"){
+            doneCol.appendChild(card);
+        }
+    });
 }
