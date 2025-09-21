@@ -27,6 +27,8 @@ This document provides an overview and documentation for the Kanban Task Managem
   /assets
     - logo-light.svg
     - favicon.svg
+    - icon-board.svg
+    - Exit-icon.svg
   /scripts
     - main.js
     - modal.js
