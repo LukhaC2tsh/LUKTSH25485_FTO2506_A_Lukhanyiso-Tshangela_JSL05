@@ -17,15 +17,9 @@ export function createTaskCard(task){
 export function renderTasks(tasks){
     const card = createTaskCard(task);
     /**clear all tasks */
-    if(toDoCol){
         toDoCol.innerHTML = "";
-    }
-    if(doingCol){
         doingCol.innerHTML = "";
-    }
-    if(doneCol){
         doneCol.innerHTML = "";
-    }
 
     /**render all tasks */
     if(toDoCol){
