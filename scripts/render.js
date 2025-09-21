@@ -1,8 +1,8 @@
 /**Rendering the UI */
 
-const toDoCol = document.getElementById(`.column-div[data-status = "todo"] .tasks-container`);
-const doingCol = document.getElementById(`.column-div[data-status = "doing"] .tasks-container`);
-const doneCol = document.getElementById(`.column-div[data-status = "done"] .tasks-container`);
+const toDoCol = document.querySelector(`.column-div[data-status = "todo"] .tasks-container`);
+const doingCol = document.querySelector(`.column-div[data-status = "doing"] .tasks-container`);
+const doneCol = document.querySelector(`.column-div[data-status = "done"] .tasks-container`);
 
 /**creates a task card div and returns the card element*/
 export function createTaskCard(task){
