@@ -7,7 +7,7 @@ const doneCol = document.getElementById(`.column-div[data-status = "done"] .task
 /**creates a task card div and returns the card element*/
 function createTaskCard(task){
     const taskCard = document.createElement('div');
-    taskCard.classList.add('task-item');
+    taskCard.classList.add('task-div');
     taskCard.id = task.id;
     taskCard.innerHTML = `${task.title}`;
 
