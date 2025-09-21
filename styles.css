@@ -243,11 +243,11 @@ dialog {
 }
 
 /* Style the modal box */
-#task-modal::backdrop {
+#new-task-modal::backdrop {
   background: rgba(0, 0, 0, 0.3);
 }
 
-#task-modal {
+#new-task-modal {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -40%);
@@ -261,19 +261,19 @@ dialog {
 }
 
 /* Header */
-.modal-header {
+.new-modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
 }
 
-.modal-header h3 {
+.new-modal-header h3 {
   margin: 0;
   font-size: 1.125rem;
 }
 
-.close-btn {
+.close-new-modal-btn {
   background: none;
   border: none;
   font-size: 2.5rem;
@@ -284,12 +284,12 @@ dialog {
   transition-delay: 0.1s; /* Delay before scaling */
 }
 
-.close-btn:hover {
+.close-new-modal-btn:hover {
   transform: scale(1.15);
   font-weight: 600;
 }
 
-.close-btn:focus {
+.close-new-modal-btn:focus {
   outline: none;
 }
 
@@ -506,23 +506,36 @@ form select {
   }
   /*New Task Button: Mobile*/
 
-  .header-btn-div-m{
-    display: flex;
-    align-items:center;
-    justify-content: center;
+
+
+  #new-task-submit{
+    font-size: 13px;
+    width: 100%;
+    max-width: 424px;
+    height: 20px;
   }
 
-  .new-task-btn-m{
-    background-color: #635fc7;
-    color: #fff;
+  #close-new-modal-btn{
+    padding: 0;
+    margin: 0;
     border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    top: 30px;
+    right: 40px;
+    z-index: 5;
+    background-color: transparent;
   }
 
-  .header-btn-div{
-    display: none;
+    #close-modal-icon{
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.1s ease-in-out;
+  }
+
+  #close-modal-icon:hover{
+  transform: scale(1.2);
   }
 }

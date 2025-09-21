@@ -15,11 +15,11 @@ let count = 0;
  */
 export function createTaskCard(task){
     const taskCard = document.createElement('div');
+    
     taskCard.classList.add('task-div');
     count += 7;
     taskCard.id = `${count}`;
     taskCard.innerHTML = `${task.title}`;
-
     return taskCard
 }
 
@@ -37,7 +37,6 @@ export function createTaskCard(task){
  *
  */
 export function renderTasks(tasks){
-    const card = createTaskCard(task);
     /**clear all tasks */
         toDoCol.innerHTML = "";
         doingCol.innerHTML = "";
