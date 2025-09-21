@@ -14,10 +14,11 @@
       sizes="32x32"
       href="./assets/favicon.svg"
     />
-    <script defer src="./scripts/main.js" type="module"></script>
+    
     <title>Kanban Task Management</title>
   </head>
 
+  <script defer src="./scripts/main.js" type="module"></script>
   <body>
     <!-- Navigation Sidebar: Contains the logo, navigation links for boards, and theme toggle. -->
     <nav class="side-bar" id="side-bar-div">
@@ -54,7 +55,7 @@
         <!--New Task Button Container: Mobile-->
         <div class="header-btn-div-m">
           <!--Add new task-->
-          <button class="new-task-btn-m" type="button" id="new-task-btn-m">+</button>
+          <button class="new-task-btn-m" type="button" id="new-task-btn-m">&times;</button>
         </div>
       </header>
 
@@ -119,20 +120,25 @@
     <dialog id="new-task-modal">
       <form method="dialog" id="new-task-form">
         <!--modal header-->
-        <div class="new-task-modal-header">
+        <div class="new-modal-header">
           <h3>Add New Task</h3>
-          <button type="button" class="close-btn" id="close-modal-btn"></button>
+          <button type="button" class="close-btn" id="close-new-modal-btn">
+            <img id="close-modal-icon" src="assets/Exit-icon.svg" alt="close-icon">
+          </button>
         </div>
         <!--Modal Main Section-->
-        <label for="new-task-input">Title</label>
-        <input id="new-task-input" placeholder="Enter the title">
-        <label for="new-task-desc" >Description</label>
-        <textarea id="new-task-desc" placeholder="Enter the description"></textarea>
-        <label for="new-task-status"></label>
+        <label for="new-task-input">Title: </label>
+        <div class="input-group">
+          <input id="new-task-input" name="title" placeholder="Enter the title" required>
+          <span class="tooltip">Title is required!</span>
+        </div>
+        <label for="new-task-desc" >Description: </label>
+        <textarea id="new-task-desc" name="description" placeholder="Enter the description"></textarea>
+        <label for="new-task-status">Status: </label>
         <select id="new-task-status" name="status" required>
-          <option value="todo">To Do</option>
-          <option value="doing">Doing</option>
-          <option value="done">Done</option>
+          <option value="todo">to do</option>
+          <option value="doing">doing</option>
+          <option value="done">done</option>
         </select>
         <button type="submit" id="new-task-submit">Create Task</button>
       </form>
