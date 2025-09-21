@@ -5,7 +5,7 @@ const doingCol = document.getElementById(`.column-div[data-status = "doing"] .ta
 const doneCol = document.getElementById(`.column-div[data-status = "done"] .tasks-container`);
 
 /**creates a task card div and returns the card element*/
-function createTaskCard(task){
+export function createTaskCard(task){
     const taskCard = document.createElement('div');
     taskCard.classList.add('task-div');
     taskCard.id = task.id;
@@ -14,7 +14,7 @@ function createTaskCard(task){
     return taskCard
 }
 /**places cards in the appropriate column */
-function renderTasks(tasks){
+export function renderTasks(tasks){
     const card = createTaskCard(task);
     /**clear all tasks */
     if(toDoCol){
